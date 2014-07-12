@@ -12,9 +12,18 @@ array_roman_string = roman_string.split('')
 
 total = 0
 
-array_roman_string.each do |l|
-  total += hash[l]
+array_roman_string.each_with_index do |l, index|
+  if array_roman_string[index+1] != nil
+    if hash[array_roman_string[index+1]] > hash[array_roman_string[index]]
+      total -= hash[l]
+    else
+      total += hash[l]
+    end
+  else
+    total += hash[l]
+  end
 end
+
 return total
 
 end
