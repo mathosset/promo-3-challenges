@@ -2,6 +2,7 @@ def shuffle_word(a_word)
   #TODO: refactor this method
 
   a_word.upcase.chars.to_a.shuffle
+
 # chars_enum = cap_word.chars
 # array = chars_enum.to_a
 # shuffle_array = array.shuffle
