@@ -5,7 +5,7 @@ def generate_grid(grid_size)
   #TODO: generate random grid of letters
   letters = []
   for i in (1..grid_size) do
-    letters << ("a".."z").to_a.sample
+    letters << ("A".."Z").to_a.sample
   end
   return letters
 end
@@ -19,16 +19,15 @@ def run_game(attempt, grid, start_time, end_time)
   end
 
   array = []
-  attempt.split('').each do |letter|
-    if grid.include?(letter)
+  attempt.upcase.split("").each do |letter|
+    if grid.include? letter
       array << true
     else
       array << false
     end
-    return array
   end
 
-  if array.include?("false")
+  if array.include?(false)
 
     result = {
         time: end_time - start_time,
