@@ -9,7 +9,7 @@ def most_common_words(file_name, stop_words_file_name, number_of_word)
   array = []
   hash = Hash.new(0)
   File.open(file_name, "r").each_line do |line|
-    array += line.scan(/\b\w+\b/)
+    array = line.scan(/\b\w+\b/).delete_if {|word| array_adword.include?(word.downcase)}
     array_result =  array - array_adword - array_adword.map{|word| word.upcase}
     array_result.each { |word| hash[word.downcase] += 1 }
   end
