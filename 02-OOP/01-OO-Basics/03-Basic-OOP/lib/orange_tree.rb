@@ -38,3 +38,4 @@ class OrangeTree
     @fruits -= 1
   end
 end
+
