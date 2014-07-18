@@ -1,12 +1,13 @@
 require 'csv'
+require_relative 'recipe'
 
 class Cookbook
 
   attr_reader :recipes
 
-  def initialize(csv_file)
+  def initialize(csv_file_path)
     @recipes = []
-    @filepath = "/Users/caroline/code/mathosset/promo-3-challenges/02-OOP/03-Cookbook/01-Cookbook-v0/#{csv_file}"
+    @filepath = csv_file_path
     load_csv
   end
 
