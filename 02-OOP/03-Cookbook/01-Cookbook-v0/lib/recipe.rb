@@ -1,9 +1,10 @@
 class Recipe
 
-attr_reader :recipe_name
+attr_reader :name, :description
 
-def initialize(recipe_name)
-  @recipe_name = recipe_name
+def initialize(name, description)
+  @name = name
+  @description = description
 end
 
-recipe1 = Recipe.new("Pot au feu")
+end
