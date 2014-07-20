@@ -1,6 +1,6 @@
-require_relative 'cookbook'
-require_relative 'view'
-require_relative 'recipe'
+require_relative "cookbook"
+require_relative "view"
+require_relative "recipe"
 
 class Controller
 
