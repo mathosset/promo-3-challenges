@@ -1,20 +1,22 @@
 require 'csv'
 require_relative 'recipe'
 
+
 class Cookbook
 
   attr_reader :recipes
 
   def initialize(csv_file_path)
-    @recipes = []
     @filepath = csv_file_path
-    load_csv
+    @recipes = []
+    load_csv(@filepath)
   end
 
-  def load_csv
-    CSV.foreach(@filepath) do |row|
+  def load_csv(file)
+    CSV.foreach(file) do |row|
       @recipes << Recipe.new(row[0], row[1])
     end
+    return @recipes
   end
 
   def save
@@ -31,7 +33,7 @@ class Cookbook
   end
 
   def remove_recipe(recipe_id)
-     @recipes.delete_at(recipe_id)
+     @recipes.delete_at(recipe_id.to_i)
      save
   end
 end

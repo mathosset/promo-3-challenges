@@ -7,20 +7,24 @@ class Controller
   def initialize(cookbook)
     @cookbook = cookbook
     @view = View.new
-
   end
 
   def list
-    @view.list(@cookbook.recipes)
+    recipes = @cookbook.recipes
+    @view.display_recipes(recipes)
 
   end
 
   def create
-    @cookbook.add_recipe(Recipe.new(@view.add_recipe[0], @view.add_recipe[1]))
+    name = @view.get_recipe_name_to_add
+    description = @view.get_recipe_description_to_add
+    new_recipe = Recipe.new(name, description)
+    @cookbook.add_recipe(new_recipe)
   end
 
   def destroy
-    @cookbook.remove_recipe(@view.destroy_recipe)
+    recipe_to_destroy = @view.get_recipe_id_to_remove
+    @cookbook.remove_recipe(recipe_to_destroy)
   end
 
 
