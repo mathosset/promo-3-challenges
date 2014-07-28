@@ -13,14 +13,15 @@ def create_post
   created_at = Time.now
 
   # TODO: use your model to create a new Post
+  Post.create(name: name, source_url: source_url, rating: rating, created_at: created_at)
 end
 
 def get_posts
   # TODO: use your model to get all posts
-  posts = ??
+  posts = Post.all
 
   puts '-' * 50
-  puts '%-3d %-15s %-20s %-30s %d' % ['#', 'Name', 'Source URL', 'Created At', 'Rating']
+  puts '%-3s %-15s %-20s %-30s %s' % ['#', 'Name', 'Source URL', 'Created At', 'Rating']
 
   posts.each do |post|
     puts '%-3d %-15s %-20s %-30s %d' % [post.id, post.name, post.source_url, post.created_at, post.rating]
@@ -31,6 +32,7 @@ end
 
 def delete_posts
   # TODO: use your model to remove all posts
+  Post.destroy_all
 end
 
 while true
