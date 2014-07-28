@@ -13,14 +13,15 @@ def create_post
   rating = ask('Rating:')
   date = Time.now
 
-  DB.execute('TODO: write the insertion SQL query')
+  DB.execute("INSERT INTO posts (name, source_url, rating, created_at)
+            VALUES ('#{name}','#{source_url}',#{rating},'#{date}')")
 end
 
 def get_posts
-  posts = DB.execute('TOTO: write the SQL query to get all posts')
+  posts = DB.execute('SELECT * FROM posts')
 
   puts '-' * 50
-  puts '%-3d %-15s %-20s %-30s %d' % ['#', 'Name', 'Source URL', 'Created At', 'Rating']
+  puts '%-3s %-15s %-20s %-30s %s' % ['#', 'Name', 'Source URL', 'Created At', 'Rating']
 
   posts.each do |post|
     puts '%-3d %-15s %-20s %-30s %d' % [post['id'], post['name'], post['source_url'], post['created_at'], post['rating']]
@@ -30,7 +31,7 @@ def get_posts
 end
 
 def delete_posts
-  DB.execute('TODO: write a query to delete all posts')
+  DB.execute('DELETE FROM posts')
 end
 
 while true
