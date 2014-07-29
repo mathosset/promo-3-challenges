@@ -26,6 +26,15 @@ while true
     puts "*" * n
   end
 
+  def display_post(post)
+    id = post[0]
+    name = post[1]
+    url = post[2]
+    rating = post[3]
+    date = post[4]
+    puts "id: #{id} - name : #{name} - #{rating} - #{url} #{date}"
+  end
+
 	case choice
   when 1
     name = ask_and_get("name")
@@ -39,7 +48,8 @@ while true
     if get_posts(db) == []
       puts "there is no post in the db"
     else
-      puts get_posts(db)
+      post = get_posts(db)
+      display_post(post)
     end
     line(30)
   when 3

@@ -1,4 +1,4 @@
-require 'sqlite3'
+  require 'sqlite3'
 
 # opens the database
 database_path = File.join(File.dirname(__FILE__), 'db/jukebox.sqlite')
@@ -6,8 +6,9 @@ db = SQLite3::Database.new(database_path)
 
 def number_of_rows(db, table_name)
   #TODO: count number of rows in table table_name
-  stm = db.execute "SELECT * FROM #{table_name}"
-  stm.count
+  sql_query = "SELECT COUNT(*) FROM #{table_name}"
+  rows = db.execute(sql_query)
+  row [0][0]
 end
 
 def sorted_artists(db)

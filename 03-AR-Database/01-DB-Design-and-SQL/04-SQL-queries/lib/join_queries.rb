@@ -17,6 +17,13 @@ def stats_on(db, category)
   stm = db.execute "SELECT COUNT(track.trackid), AVG(track.Milliseconds) FROM track
                     JOIN genre g ON (track.genreid = g.genreid)
                     WHERE g.name LIKE '%#{category}%'"
+
+  #sql_query = "SELECT Genre.name, AVG(track.Milliseconds), COUNT(track.TRackId) FROM tracks
+              #JOIN Genre ON  Track.genreId = Genre.Genre.id
+              #GROUP BY Genre.name
+              #ORDER BY avg DESC"
+
+  genre = row[0]
   hash = Hash.new
   hash = {
     "category:" => category,

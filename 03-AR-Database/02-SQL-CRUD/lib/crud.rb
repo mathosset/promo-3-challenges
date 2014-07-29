@@ -23,12 +23,13 @@ end
 def get_posts(db)
    #TODO: list all posts
   stm = db.execute "SELECT * FROM posts"
-  stm.flatten
+  stm.each {|row| puts "#{row[0]} - #{row[1]} - #{row[2]}"}
 end
 
 def get_post(db, id)
   #TODO: get a specific post
-  stm = db.execute "SELECT * FROM posts WHERE id = id"
+  stm = db.execute "SELECT * FROM posts WHERE id = #{id}"
+  stm.each {|row| puts "#{row[0]} - #{row[1]} - #{row[2]}"}
 end
 
 def update_post(db, id, name)
