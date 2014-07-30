@@ -3,3 +3,40 @@
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+header {
+  border-bottom: 1px dotted grey;
+  padding-top: 10px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+header ul {
+  text-align: center;
+}
+
+header li {
+  display: inline;
+}
+
+header a {
+  display: inline-block;
+  width: 100px;
+}
+
+body {
+  font-weight: 300;
+}
+
+body h2 {
+  display: block;
+  font-size: 1.5em;
+}
+
+footer {
+  border-top: 1px dotted grey;
+  padding: 10px 0px 10px 10px;
+}
+
