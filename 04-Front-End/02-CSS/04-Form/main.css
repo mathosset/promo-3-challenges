@@ -1,6 +1,71 @@
 .container {
-  margin: 0 auto;  
+  margin: 0 auto;
   width: 840px;
 }
 
-/*Add some CSS rules to design your form */ 
+/*Add some CSS rules to design your form */
+
+header {
+  position: fixed;
+  background-color: black;
+  left: 0;
+  right: 0;
+  padding: 0;
+  height: 80px;
+  color: white;
+  top: 0;
+}
+
+fieldset {
+  padding:0 20px 20px 20px;
+  margin-bottom:10px;
+  border:1px dotted grey;
+  border-radius: 5px;
+}
+
+.nav-content {
+  margin: 0 auto;
+  width: 840px
+}
+
+.content {
+  padding-top: 200px;
+}
+
+form {
+  padding: 20px;
+}
+
+footer {
+  padding: 10px 10px 20px 20px;
+  clear: both;
+}
+
+.photo {
+  height: 400px;
+  opacity: 0.8;
+  background-position: cover;
+  background: url(http://cdn.shopify.com/s/files/1/0255/6041/files/slideshow-ete11.jpg?6270) no-repeat right bottom;
+}
+
+body h2 {
+  display: block;
+}
+
+label {
+  padding: 5px;
+  display: block;
+}
+.inline {
+  display: inline-block;
+}
+
+input[type=radio] {
+ background-color:transparent;
+ border:none;
+ width:30px;
+ }
+
+ input[type=submit]:hover, input[type=reset]:hover {
+  background-color: grey;
+ }

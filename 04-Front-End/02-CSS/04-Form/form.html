@@ -11,10 +11,91 @@
 
 </head>
 <body>
+  <section>
+    <section class="photo">
+  </section>
   <div class="container">
-
     <!--YOUR FORM HERE-->
-
+    <header>
+      <div class="nav-content">
+        <h1>Formulaire d'inscription</h1>
+      </div>
+    </header>
+      <form>
+        <fieldset>
+          <h2>Informations personnelles</h2>
+          <label class="inline">
+            Mr.
+            <input type="radio" name="genre" value="m">
+          </label>
+           <label class="inline">
+            Mme
+            <input type="radio" name="genre" value="f">
+          </label>
+          <label class="inline">
+            Nom :
+            <input type ="texte" name="Nom">
+          </label>
+          <label class="inline">
+            Prénom :
+            <input type ="texte" name="Prénom">
+          </label>
+          <label class="inline">
+            Adresse :
+            <input type ="texte" name="Adresse">
+          </label>
+           <label class="inline">
+            Email :
+            <input type ="texte" name="Email">
+          </label>
+          <label>
+            Profession :
+            <select name="Profession">
+              <option value="s">Salarié</option>
+              <option value="f">Fonctionnaire</option>
+              <option value="r">Profession libérale</option>
+              <option value="a">Autre</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <h2>Workshop</h2>
+          <label>
+            Workshop 1
+            <input type="radio" name="Workshop" value="1">
+          </label>
+           <label>
+            Workshop 2
+            <input type="radio" name="Workshop" value="2">
+          </label>
+           <label>
+            Workshop 3
+            <input type="radio" name="Workshop" value="3">
+          </label>
+        </fieldset>
+        <fieldset>
+          <h2>Meals</h2>
+          <label>
+            Repas inclus :
+            <select name="Repas">
+              <option value="o">Oui</option>
+              <option value="n">Non</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <h2>Commentaires</h2>
+          <textarea class="textarea" name="Commentaire" cols="80"rows="10">Ajouter vos commentaires</textarea>
+        </fieldset>
+        <p>
+         <input type="submit" value="Envoyer" />
+         <input type="reset" value="Annuler" />
+        </p>
+      </form>
+    </section>
+    <footer>
+       &copy; Le Wagon 2013
+    </footer>
   </div>
 </body>
 </html>
