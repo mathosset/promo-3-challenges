@@ -2,9 +2,13 @@ require_relative 'config/application'
 require_relative 'models/post'
 require_relative 'models/user'
 
+<<<<<<< HEAD
 User.where(name: "Mat", email: "mat@gmail.com").first_or_create
 
 p User.last
+=======
+User.where(name: 'toto', email: 'toto@toto.com').first_or_create
+>>>>>>> da7fb3cf124754258bd9a08c890e042c3de1cc7d
 
 def ask(prompt)
   print "#{prompt} "
