@@ -1,0 +1,28 @@
+body {
+  background: #EEE;
+  text-align: center;
+}
+
+table {
+  margin: 100px auto 0;
+}
+
+td {
+  border: 1px dashed grey;
+  padding: 5px;
+}
+
+#player1 .active {
+  background-image: url('../img/player_1.png');
+  background-size: cover;
+}
+
+#player2 .active {
+  background-image: url('../img/player_2.png');
+  background-size: cover;
+}
+
+.racer_table td {
+  height: 25px;
+  width: 50px;
+}
