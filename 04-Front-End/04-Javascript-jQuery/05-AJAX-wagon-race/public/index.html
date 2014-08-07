@@ -1,13 +1,41 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js">
   <head>
-    <meta charset="utf-8" />
-    <title>JAJAX Wagon Race</title>
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-  </head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AJAX Wagon race</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
   <body>
+    <form id='new-game' class='start-hidden'>
+      <input id="palyer1" type='text' placeholder="Player 1"/>
+      <input id="player2" type='text' placeholder="Player 2"/>
+      <input class="btn" type='submit' value='New Game'/>
+    </form>
+
+    <div class="players">
+      <div id="player1_hint"></div>
+      <div id="player2_hint"></div>
+      <div>****************</div>
+      <div id="result">Results: </div>
+      <button id="btn-start" type='click' value='start again'/>
+      <label>Start again</label>
+      </button>
+
+    <table class="racer_table start-hidden">
+      <tr id="player1_race">
+        <td class="active"></td>
+      </tr>
+      <tr id="player2_race">
+        <td class="active"></td>
+      </tr>
+    </table>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/game.js"></script>
   </body>
 </html>
