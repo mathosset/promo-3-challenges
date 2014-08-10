@@ -2,6 +2,7 @@ var GRID_SIZE = 10;
 var PLAYER1_KEY = 68; // D
 var PLAYER2_KEY = 76; // L
 
+
 $(function() {
   generate_grid(GRID_SIZE);
   give_player_hints(PLAYER1_KEY, PLAYER2_KEY);
